@@ -37,7 +37,7 @@ gem 'prawn-table'
 # gem 'capistrano-rails', group: :development
 
 # Use bootstrap
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap', '~> 4.5.0'
 
 # Jquery rails
 gem 'jquery-rails'
