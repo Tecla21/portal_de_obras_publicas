@@ -1,0 +1,62 @@
+en:
+  greetings: "Hello Guest"
+  logout: "Log Out"
+  settings: "Settings"
+  security: "Security"
+  pagy:
+    nav:
+      prev: "< Anterior"
+      next: "Posterior >"
+      gap: "..."
+  models:
+    users: "Users"
+  activerecord:
+    errors:
+      messages:
+        record_invalid: "record invalid"
+      format: "%{message}"
+      models:
+        user:
+          attributes:
+            password:
+              blank: "Can't be blank"
+            current_password:
+              invalid: "wrong password"
+            email:
+              blank: "can't be blank"
+            password_confirmation:
+              confirmation: " needs confirmation"
+            iban:
+              blank: "can't be blank"
+              invalid: "invalid"
+              length: "invalid number of characters"
+            name:
+              blank: "can't be blank"
+        payment:
+          attributes:
+            number:
+              invalid: "invalid"
+            value:
+              blank: "can't be blank"
+  controllers:
+    users:
+      notifications:
+        created_successfully: "Merchant created successfully"
+  views:
+    users:
+      new_user: "New User"
+      edit_user: "Edit User"
+      buttons:
+        new_user: "New User"
+        create_user: "Create User"
+        show_details: "Show Details"
+        list_users: "List Users"
+        edit_user: "Edit User"
+  number:
+    currency:
+      format:
+        delimiter: "."
+        format: "%n %u"
+        precision: 2
+        separator: ","
+        unit: "Kz"

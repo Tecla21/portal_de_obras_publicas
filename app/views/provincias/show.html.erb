@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <%= link_to 'Provincia', "#", class: "navbar-brand" %>
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li>
+              <%= link_to 'Voltar', provincias_url, class: "btn btn-secondary"%>
+              <%= link_to 'Alterar',  edit_provincia_url(@provincia), class: "btn btn-primary"%>
+              <%= link_to 'Eliminar', @provincia, method: :delete, data: {confirm: 'Tens Certeza ?'}, class: "btn btn-danger"%>
+            </li>
+          </ul>
+        </nav>
+      </div >
+
+      <div class="card-header">
+        <div class="row paymentDetails">
+          <div class="col-sm-12 col-md-8">
+            <div class="row">
+              <div class="col-sm-12 paymentDetailsCell">
+                <ul class="paymentDetailsItem">
+                  <li class="text-center paymentDetailsItemLabel">
+                    <span>Nome</span>
+                  </li>
+                  <li class="text-center paymentDetailsItemValue">
+                    <%= @provincia&.nome %>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 paymentDetailsCell">
+                <ul class="paymentDetailsItem">
+                  <li class="text-center paymentDetailsItemLabel">
+                    <span>Pais</span>
+                  </li>
+                  <li class="text-center paymentDetailsItemValue">
+                    <%= @provincia&.pais.nome %>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 paymentDetailsStatus">
+            <%= image_tag("angola.svg", size: 150, class: 'card-img-top') %>
+          </div>
+        </div>
+      </div >
+    </div>
+  </div>
+</div>

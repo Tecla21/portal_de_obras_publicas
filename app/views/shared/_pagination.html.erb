@@ -1,0 +1,19 @@
+<%# if pagy.next ||  pagy.prev -%>
+  <% link = pagy_link_proc(pagy) -%>
+  <%#                            -%><nav aria-label="Page navigation example">
+  <%#                            -%>  <ul class="pagination pagination-sm">
+  <% if pagy.prev                -%>    <li class="page-item page-link"><%== link.call(pagy.prev, '< ', 'aria-label="previous"') %></li>
+  <% else                        -%>    <li class="page-item page-link disabled"><%== '< ' %></span></li>
+  <% end                         -%>
+  <% pagy.series.each do |item|   # series example: [1, :gap, 7, 8, "9", 10, 11, :gap, 36] -%>
+  <%   if    item.is_a?(Integer) -%>    <li class="page-item page-link "><%== link.call(item) %></span></li>
+  <%   elsif item.is_a?(String)  -%>    <li class="page-item page-link text-danger"><%= item %></span></li>
+  <%   elsif item == :gap        -%>    <li class="page-item page-link "><%== '...' %></span></li>
+  <%   end                       -%>
+  <% end                         -%>
+  <% if pagy.next                -%>    <li class="page-item page-link "><%== link.call(pagy.next, ' >', 'aria-label="next"') %></span></li>
+  <% else                        -%>    <li class="page-item page-link disabled"><%== ' >' %></span></li>
+  <% end                         -%>
+  <%#                            -%>  </ul>
+  <%#                            -%></nav>
+<%# end                         -%>

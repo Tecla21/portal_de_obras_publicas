@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PODOPU</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+
+  <body>
+    <% if user_signed_in? %>
+      <div class="container">          
+        <div id="wrapper" class="animate">
+          <nav class="navbar header-top fixed-top navbar-expand-lg  navbar-dark bg-dark">
+            <span class="navbar-toggler-icon leftmenutrigger"></span>
+            <a class="navbar-brand" href="<%= root_url %>">PODOPU</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav mr-auto d-md-flex">
+                <li class="nav-item"><a class="nav-link" href="<%= root_url %>">Home<span class="sr-only">(current)</span></a></li>
+                <li class="nav-item"><%= link_to 'Empreiteiros', empreiteiros_url, class: "nav-link text-right" %></li>
+                <li class="nav-item"><%= link_to 'Países', paises_url, class: "nav-link" %></li>
+                <li class="nav-item"><%= link_to 'Províncias', provincias_url, class: "nav-link" %></li>
+                <li class="nav-item"><%= link_to 'Municípios', municipios_url, class: "nav-link" %></li>
+                <li class="nav-item"><%= link_to t('users'), users_url, class: "nav-link" %></li>
+                <li class="nav-item"> <%= link_to t('logout'), destroy_user_session_path, method: :delete, class: "nav-link text-right" %></li>
+              </ul>
+            </div>
+          </nav>
+          <div class="container-fluid">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    <% else %>
+      <%= yield %>
+    <% end %>
+  </body>
+</html>
+

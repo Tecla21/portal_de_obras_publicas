@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <%%= simple_form_for @<%= singular_table_name %>, validate: true, html:{ multipart: true } do |f| %>
+        <div class="card-header">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <%% unless @<%= singular_table_name %>.id.present? %>
+              <h1 class='texto_leve'>Editar <%= singular_table_name&.capitalize&.humanize %></h1>
+            <%% else %>
+              <h1 class='texto_leve'>Novo <%= singular_table_name&.capitalize&.humanize %></h1>
+            <%% end %>
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+              <%% if @<%= singular_table_name %>.id.blank? %>
+                <li><%%= f.button :submit, 'Registar', class: "btn btn-success btn-sm", "data-toggle" => "tooltip", 'data-position' => "top",  "data-tooltip" => "Registar"%></li>
+                <li><%%= link_to 'Cancelar', <%= plural_table_name %>_url, "data-toggle" => "tooltip", 'data-position' => "top",  "data-tooltip" => "Cancelar", class:"btn btn-default" %>
+              <%% else %>
+                <li><%%= f.button :submit, 'Actualizar', class: "btn btn-success btn-sm", "data-toggle" => "tooltip", 'data-position' => "top",  "data-tooltip" => "Actualizar"%></li>
+                <li><%%= link_to 'Cancelar', <%= singular_table_name %>_url(@<%= singular_table_name %>), "data-toggle" => "tooltip", 'data-position' => "top",  "data-tooltip" => "Cancelar", class:"btn btn-default" %></li>
+              <%% end %>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="card-body">
+          <div class="row">
+            <%- attributes.each do |attribute| -%>
+              <%%= f.<%= attribute.reference? ? :association : :input %> :<%= attribute.name %>, label: "<%= attribute.name.capitalize.humanize %>", placeholder: "<%= attribute.name.capitalize.humanize %>", wrapper_html: {class: 'col-sm-6 col-xs-12'}, input_html: {class: ''} %>
+            <%- end -%>
+          </div>
+        </div>
+      <%%end%>
+    </div>
+  </div>
+</div>

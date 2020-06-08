@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <%= link_to 'Municípios', "#", class: "navbar-brand" %>
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li><%= link_to 'Novo', new_municipio_url, class: "btn btn-primary mr-auto"%></li>
+          </ul>
+        </nav>
+      </div >
+
+      <div class="card-body">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th class="text-left ">Nome</th>
+					<th class="text-left ">Província</th>
+					<th class="text-left ">Acções</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<% @municipios.each do |municipio| %>
+					<tr>
+						<td class="text-left "><%= municipio&.nome %></td>
+						<td class="text-left "><%= municipio&.provincia.nome %></td>
+						<td class="text-left"><%= link_to 'Ver', municipio_url(municipio), class: 'mr-auto'%></td>
+					
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+      </div >
+      <div class="card-footer">
+        <%= render partial: 'shared/pagination', locals: {pagy: @pagy} %>
+      </div>
+    </div>
+  </div>
+</div>

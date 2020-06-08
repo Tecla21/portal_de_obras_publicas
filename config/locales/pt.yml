@@ -1,0 +1,90 @@
+pt:
+  greetings: "Olá Visitante"
+  logout: "Sair"
+  settings: "Configurações"
+  security: "Segurança"
+  devise:
+    failure:
+      not_found_in_database: "E-mail inserido não pertence a uma conta. Verifique seu e-mail e tente novamente."
+  mail:
+    send_merchant_payment_email:
+      subject: "Novo Pagamento"
+    welcome_email:
+      subject: "Bem vindo ao PODOPU"
+    send_payment_confirmation:
+      subject: "Pagamento confirmado"
+  pagy:
+    nav:
+      prev: "< Anterior"
+      next: "Posterior >"
+      gap: "..."
+  models:
+    users: "Usuários"
+  activerecord:
+    errors:
+      messages:
+        record_invalid: "Dados Inválidos"
+      format: "%{message}"
+      models:
+        user:
+          attributes:
+            password:
+              blank: "não pode estar em branco"
+            current_password:
+              invalid: "senha inválida"
+            email:
+              blank: "não pode estar em branco"
+            password_confirmation:
+              confirmation: "é necessario a senha de confirmação"
+            iban:
+              blank: "não pode estar em branco"
+              invalid: "inválido"
+              length: "numéro de caracteres inválido"
+            name:
+              blank: "não pode estar em branco"
+        payment:
+          attributes:
+            number:
+              invalid: "inválido"
+            value:
+              blank: "não pode estar em branco"
+    enums:
+      receipts:
+        status:
+          requested: "Requerido"
+          paid: "Pago"
+    attributes:
+      user:
+        cellphone: "Telemóvel"
+  controllers:
+    users:
+      notifications:
+        created_successfully: "Usuário criado com sucesso"
+        updated_successfully: "Usuário actualizado com sucesso"
+        canceled_successfully: "Usuário cancelado com sucesso"
+        deleted_successfully: "Usuário eliminado com sucesso"
+  views:
+    users:
+      new_user: "Novo Usuário"
+      edit_user: "Editar Usuário"
+      buttons:
+        new_user: "Novo Usuário"
+        create_user: "Criar Usuário"
+        show_details: "Ver"
+        list_users: "Listar Usuários"
+        edit_user: "Editar Usuário"
+      labels:
+        email: "Email do Usuário"
+        cellphone: Telemóvel
+        password: "Senha"
+        password_confirmation: "Confirmação da Senha"
+  number:
+    currency:
+      format:
+        delimiter: "."
+        format: "%n %u"
+        precision: 2
+        separator: ","
+        unit: "Kz"
+
+

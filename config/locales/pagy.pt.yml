@@ -1,0 +1,6 @@
+pt:
+  pagy:
+    nav:
+      prev: "‹ Anterior"
+      next: "Posterior ›"
+      gap: "…"

@@ -1,0 +1,2 @@
+class Empreiteiro < ApplicationRecord
+end

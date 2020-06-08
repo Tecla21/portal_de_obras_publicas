@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <%= simple_form_for @municipio, validate: true, html:{ multipart: true } do |f| %>
+        <div class="card-header">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <% unless @municipio.id.present? %>
+              <h1 class='texto_leve'>Editar Municipio</h1>
+            <% else %>
+              <h1 class='texto_leve'>Novo Municipio</h1>
+            <% end %>
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+              <% if @municipio.id.blank? %>
+                <li><%= f.button :submit, 'Registar', class: "btn btn-success btn-sm", "data-toggle" => "tooltip", 'data-position' => "top",  "data-tooltip" => "Registar"%></li>
+                <li><%= link_to 'Cancelar', municipios_url, "data-toggle" => "tooltip", 'data-position' => "top",  "data-tooltip" => "Cancelar", class:"btn btn-default" %>
+              <% else %>
+                <li><%= f.button :submit, 'Actualizar', class: "btn btn-success btn-sm", "data-toggle" => "tooltip", 'data-position' => "top",  "data-tooltip" => "Actualizar"%></li>
+                <li><%= link_to 'Cancelar', municipio_url(@municipio), "data-toggle" => "tooltip", 'data-position' => "top",  "data-tooltip" => "Cancelar", class:"btn btn-default" %></li>
+              <% end %>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="card-body">
+          <div class="row">
+              <%= f.input :nome, label: "Nome", placeholder: "Nome", wrapper_html: {class: 'col-sm-6 col-xs-12'}, input_html: {class: ''} %>
+              <%= f.association :provincia, label: "Provincia", collection: Provincia.all.map{|provincia| [provincia.nome, provincia.id]}, include_blank: false, placeholder: "Provincia", wrapper_html: {class: 'col-sm-6 col-xs-12'}, input_html: {class: ''} %>
+          </div>
+        </div>
+      <%end%>
+    </div>
+  </div>
+</div>

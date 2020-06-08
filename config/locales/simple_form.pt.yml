@@ -1,0 +1,39 @@
+pt:
+  simple_form:
+  helpers:
+    submit:
+      user:
+        create: "Criar Usuário"
+        update: "Actualizar Usuário"
+      payment:
+        create: "Criar Pagamento"
+        update: "Actualizar Pagamento"
+    "yes": 'Sim'
+    "no": 'Não'
+    required:
+      text: 'obrigatório'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Revise os problemas abaixo:"
+    # Examples
+    labels:
+      defaults:
+        password: 'Senha'
+      user:
+        new:
+          email: 'E-mail para entrar.'
+        edit:
+          email: 'E-mail.'
+    hints:
+      defaults:
+        username: 'Usuário para entrar.'
+        password: 'Sem caracters especiais.'
+    include_blanks:
+      defaults:
+        age: 'Prefiro não dizer'
+    prompts:
+      defaults:
+        age: 'Seleccione a sua idade'

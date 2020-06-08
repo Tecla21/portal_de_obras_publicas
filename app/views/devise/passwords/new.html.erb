@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="form-group mx-auto col-10 col-sm-10 col-md-6 col-lg-4">
+    <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <h1 class="h3 mb-3 text-center font-weight-normal">Reset da Senha</h1>
+      <%= f.input :email, required: true, autofocus: true, label: false, placeholder: "email@exemplo.com", input_html: { autocomplete: "email", class: "text-center"} %>
+
+      <div class="form-group">
+        <%= f.button :submit, t('devise.buttons.reset_password'), class: "btn btn-primary form-control" %>
+        <%= link_to t('devise.links.sign_in').upcase, new_session_path(resource_name), class: "btn btn-link form-control" %>
+      </div>
+    <% end %>
+

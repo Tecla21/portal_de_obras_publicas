@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <%= link_to t('models.users'), "#", class: "navbar-brand" %>
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li><%= link_to t('views.users.buttons.new_user'), new_user_url, class: "btn btn-primary mr-auto"%></li>
+          </ul>
+        </nav>
+      </div >
+
+      <div class="card-body">
+        <table class="table table-sm table-hover">
+          <thead>
+            <tr>
+              <th scope="col" class="text-center"><%= User.human_attribute_name(:cellphone) %></th>
+              <th scope="col" class="text-center"><%= User.human_attribute_name(:email) %></th>
+              <th scope="col" colspan="1"></th>
+            </tr>
+          </thead>
+      
+          <tbody>
+            <% @users.each do |user| %>
+              <tr>
+                <td class="text-center"><%= user.cellphone %></td>
+                <td class="text-center"><%= user.email %></td>
+                <td class="text-certer"><%= link_to t('views.users.buttons.show_details'), user %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div >
+
+      <div class="card-footer">
+        <%= render partial: 'shared/pagination', locals: {pagy: @pagy} %>
+      </div>
+    </div>
+  </div>
+</div>
