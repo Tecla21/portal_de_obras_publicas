@@ -28,6 +28,8 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="/assets/obra1.jpg" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- Custom styles for this template -->
+
+    <%#= stylesheet_link_tag 'flaticon' %>
   </head>
   <body>
 
@@ -54,7 +56,7 @@
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
+         </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="first-slide" src="/assets/obra1.jpg" class="responsive" width="100%" alt="First slide">
@@ -101,7 +103,91 @@
         <!-- Marketing messaging and featurettes ================================================== -->
         <!-- Wrap the rest of the page in another container to center all the content. -->
 
-        <div class="container marketing">
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-xs-12 col-md-10 col-lg-10">
+                        <div class="page-title text-center">
+                            <span class="section-icon"><i class='flaticon-020-manufacture'></i></span>
+                            <div class="p-2"></div>
+                            <h5 class="title">Sobre o portal</h5>
+                            <div class="p-3"></div>
+                            <h3 class="blue-color">A beautiful app for consectetur </h3>
+                            <div class="p-2"></div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiing elit, 
+                            sed do eiusmod tempor incididunt ut labore et laborused sed 
+                            do eiusmod tempor incididunt ut labore et laborused.
+                            
+                            Lorem ipsum dolor sit amet, consectetur adipiing elit, 
+                            sed do eiusmod tempor incididunt ut labore et laborused sed 
+                            do eiusmod tempor incididunt ut labore et laborused.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="first" class="first">
+            <div class="container-fluid">
+                <div class="row">   
+                    <div class="col-lg-6 col-md-6 pl-0">
+                        <img class="img-fuid img-first" src="/assets/obra1.jpg">
+                    </div>
+                    <div class="col-lg-6 col-md-5 p-lg-5 p-md-2 d-flex align-items-center">
+                        <div class="page-title">
+                            <h5 class="title">Titulo da obra </h5>
+                            <div class="p-lg-2 p-md-1"></div>
+                            <h3 class="subtitle">Informações adicionais</h3>
+                            <div class="p-lg-2 p-md-1"></div>
+                            <div class="description">
+                                <p>
+                                    It is a long established fact that a reader will be 
+                                    distracted by the readable content of a page when looking 
+                                    at its layout. The point of using Lorem Ipsum is that 
+                                    it has a more-or-less normal distribution of letters, as 
+                                    opposed to using 'Content here, content here', making it 
+                                    look like readable English. Many desktop publishing packages 
+                                </p>
+                            </div>
+                            <div class="p-lg-5 p-md-2"></div>
+                            <a href="#" class="btn-default">Ler Mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="two" class="two">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 col-md-5 p-lg-5 p-md-2 d-flex align-items-center">
+                        <div class="page-title pl-3">
+                            <h5 class="title">Titulo da obra </h5>
+                            <div class="p-lg-2 p-md-1"></div>
+                            <h3 class="subtitle">Informações adicionais</h3>
+                            <div class="p-lg-2 p-md-1"></div>
+                            <div class="description">
+                                <p>
+                                    It is a long established fact that a reader will be 
+                                    distracted by the readable content of a page when looking 
+                                    at its layout. The point of using Lorem Ipsum is that 
+                                    it has a more-or-less normal distribution of letters, as 
+                                    opposed to using 'Content here, content here', making it 
+                                    look like readable English. Many desktop publishing packages 
+                                </p>
+                            </div>
+                            <div class="p-lg-5 p-md-2"></div>
+                            <a href="#" class="btn-default">Ler Mais</a>
+                        </div>
+                    </div> 
+                    <div class="col-lg-6 col-md-7 pr-0 just">
+                        <img class="img-fuid img-two float-right" src="/assets/obra2.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <%# <div class="container marketing">
 
         <!-- START THE FEATURETTES -->
 
@@ -165,26 +251,26 @@
             </div>
         </div>
 
-        <hr class="featurette-divider">
+        <hr class="featurette-divider"> %>
 
         <!-- /END THE FEATURETTES -->
         <!-- Three columns of text below the carousel -->
         <div class="row">
-            <div class="col-lg-4">
+            <!--<div class="col-lg-4">
                 <img class="rounded-circle" src="/assets/user.png" alt="Generic placeholder image" width="140" height="140">
                 <h2>Personagem 1</h2>
                 <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4">
+            </div> /.col-lg-4 -->
+           <!-- <div class="col-lg-4">
                 <img class="rounded-circle" src="/assets/user.png" alt="Generic placeholder image" width="140" height="140">
                 <h2>Personagem 1</h2>
                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
+            </div> /.col-lg-4 -->
+          <!--<div class="col-lg-4">
             <img class="rounded-circle" src="/assets/user.png" alt="Generic placeholder image" width="140" height="140">
             <h2>Personagem 1</h2>
             <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          </div><!-- /.col-lg-4 -->
+          </div> /.col-lg-4 -->
         </div><!-- /.row -->
 
       </div><!-- /.container -->

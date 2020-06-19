@@ -17,9 +17,27 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+
+
+
 $( document ).ready(function() {
     $('.leftmenutrigger').on('click', function(e) {
     $('.side-nav').toggleClass("open");
     e.preventDefault();
-   });
+    });
 });
+
+var s = 0;
+var ShowTime = 2000;
+function slideShow() {
+    var i = 0;
+    var slide = document.getElementsByClassName('img-slide');
+    for( i; i < slide.length; i++) {
+        slide[i].style.display = 'none';
+    }
+    s++;
+    if( s > slide.length ) { s = 1; }
+    slide[ s-1 ].style.display = 'block';
+    setTimeout('slideShow()', ShowTime);
+}
+window.onload = slideShow;

@@ -1,5 +1,215 @@
 @import "bootstrap";
 
+@font-face {
+    font-family: 'Open-Sans';
+    src: url('/assets/fonts/opensans-regular-webfont.woff2') format('woff2'),
+         url('/assets/fonts/opensans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/**--------------------------------
+ * 	GLOBAL
+-----------------------------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open-Sans', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+a:hover {
+	color: #f9f9f97d;
+	text-decoration: none;
+}
+
+section {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.section-icon {
+	background-color: rgba(151, 51, 51, 0.312);
+	display: inline-block;
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.section-icon i {
+	color: rgba(122, 51, 151, .95);
+	font-size: 36px;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.page-title {
+	// display: flex;
+	// align-items: center;
+}
+
+.title {
+	position: relative;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	color: #29292aa7;
+	font-weight: 600;
+	font-size: 14px;
+}
+
+.subtitle {
+	font-size: 32px;
+	opacity: .2;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.subtitle {
+		font-size: 28px;
+	}
+	.description {
+		font-size: 14px;
+	}
+}
+
+
+/**--------------------------------
+ * 	ABOUT SECTION
+-----------------------------------*/
+
+#about .title:before {
+    content: '';
+    width: 50px;
+    height: 1px;
+    display: inline-block;
+    background-color: #e1e1e1;
+    margin: 0 15px;
+    -webkit-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    transform: translateY(-4px);
+}
+
+#about .title:after {
+    content: '';
+    width: 50px;
+    height: 1px;
+    display: inline-block;
+    background-color: #e1e1e1;
+    margin: 0 15px;
+    -webkit-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    transform: translateY(-4px);
+}
+
+/**--------------------------------
+ * 	FIRST SECTION
+-----------------------------------*/
+
+// #first {
+// 	height: 600px;
+// 	background: url('/assets/obra1.jpg');
+// 	background-repeat: no-repeat;
+// 	background-position: left center;
+// 	background-size: auto 100%;
+// 	border-radius: 0 10px 10px 0;
+// }
+
+.first .img-first {
+	height: 500px;
+	border-radius: 0 10px 10px 0;
+}
+
+
+#first .title:after {
+    content: '';
+    width: 50px;
+    height: 1px;
+    display: inline-block;
+    background-color: #e1e1e1;
+    margin: 0 15px;
+    -webkit-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    transform: translateY(-4px);
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.first .img-first {
+		height: 350px;
+	}	
+}
+
+.btn-default {
+	padding: 12px 40px;
+	background: linear-gradient(45deg, rgb(139, 17, 17) 40%, rgba(36, 16, 16, 0.829) 100%);
+	color: #fff;
+	box-shadow: rgba(0, 0, 0, .1);
+	transform: translate(0);
+	display: inline-block;
+	text-transform: uppercase;
+	border-radius: 10px;
+	letter-spacing: 1.5px;
+	font-weight: 700;
+	transition: .3s;
+	font-size: 14px;
+	border: none;
+}
+
+
+/**--------------------------------
+ * 	SECUND SECTION
+-----------------------------------*/
+
+.two .img-two {
+	height: 500px;
+	border-radius: 10px 0 0 10px;
+	margin-left: -25px;
+}
+
+.two .title::after {
+	content: '';
+	width: 50px;
+	height: 1px;
+	display: inline-block;
+	background-color: #e1e1e1;
+	margin: 0 15px;
+	-webkit-transform: translateY(-4px);
+	-ms-transform: translateY(-4px);
+	transform: translateY(-4px);
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.two .img-two {
+		height: 350px;
+	}	
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1024px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .paymentDetailsItemValue {
 	background-color: #f9f9f9;
