@@ -9,6 +9,35 @@
 
 }
 
+@font-face {
+	font-family: "IcoFont";
+	font-weight: normal;
+	font-style: "Regular";
+	src: url("icofont/icofont.woff2") format("woff2"), 
+	url("icofont/icofont.woff") format("woff");
+}
+
+[class^="icofont-"], [class*=" icofont-"] {
+font-family: 'IcoFont' !important;
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+white-space: nowrap;
+word-wrap: normal;
+direction: ltr;
+line-height: 1;
+float: left;
+/* Better Font Rendering =========== */
+
+}
+
+.icofont-search-property:before
+{
+  content: "\ed17";
+}
+
+
 /**--------------------------------
  * 	GLOBAL
 -----------------------------------*/
@@ -17,6 +46,7 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Open-Sans', sans-serif;
+	font-size: 14px;
 }
 
 a {
@@ -93,6 +123,55 @@ section {
  * 	HEADER SECTION
 -----------------------------------*/
 
+.header {
+	background: linear-gradient(135deg, rgba(185, 19, 19, 0.857) 0%, rgba(132, 119, 0, 0.802) 50%, rgba(19, 2, 2, 0.755) 80%);
+	border-radius: 0;
+	margin: 0em;
+	padding: .5rem 0rem 0;
+	padding-bottom: 1rem;
+	box-shadow: 0 5px 12px rgba(0, 0, 0, 0.362);
+}
+
+.logo {
+	position: relative;
+    top: 4px;
+    bottom: 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.401);
+}
+
+#header .title-logo {
+	font-weight: 600;
+	font-family: sans-serif;
+}
+
+#header .menu .item {
+	right: 80px;
+    position: absolute;
+}
+
+#header .menu .login {
+	position: absolute;
+    right: 0;
+}
+
+.menu .item .input {
+	position: relative;
+	bottom: 5px;
+	color: rgba(165, 162, 162, 0.87);
+}
+
+.menu .item .input>input {
+	background-color: transparent;
+	border: none;
+	font-size: 1em;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+}
+
+.menu .item .input>input:focus {
+	color: rgba(255, 255, 255, 0.523);
+	outline: none;
+}
 
 /**--------------------------------
  * 	ABOUT SECTION
