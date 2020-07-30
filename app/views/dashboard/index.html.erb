@@ -22,86 +22,296 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
     <title>PODOPU</title>
-
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="/assets/obra1.jpg" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- Custom styles for this template -->
   </head>
   <body>
-
-    <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="<%= root_url %>">PODOPU <span class="sr-only">(current)</span></a>
-            </li>
-          </ul>
-          <form class="form-inline mt-2 mt-md-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-          </form>
+    <header id="header" class="header fixed-top">
+      <nav class="head">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 menu">
+              <div class="logo">
+                <a class="title-logo" href="<%= root_url %>">PODOPU</a>
+                <div class="float-right">
+                  <div class="row">
+                    <div class="item">
+                      <div class="icon input">
+                        <input placeholder="Search..." type="text" aria-label="Search">
+                        <a type="submit"><i class="icofont-search-property"></i></a>
+                      </div>
+                    </div>
+                    <div class="login">
+                      <a href="<%= dashboard_home_url %>" class=""> Entrar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
-
     <main role="main">
-
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="first-slide" src="/assets/obra1.jpg" class="responsive" width="100%" alt="First slide">
-                    <div class="container">
-                        <div class="carousel-caption text-left">
-                            <h1>Estádio</h1>
-                            <p>Construnção de um estário de futebol para o CAN.</p>
-                            <p><a class="btn btn-lg btn-primary" href="<%= dashboard_home_url %>" role="button">Entrar</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="second-slide" src="/assets/obra2.jpg" class="responsive" alt="Second slide">
-                    <div class="container">
-                    <div class="carousel-caption">
-                        <h1>Centralidade</h1>
-                        <p>Obras de uma centralidade em Luanda.</p>
-                        <p><a class="btn btn-lg btn-primary" href="<%= dashboard_home_url %>" role="button">Entrar</a></p>
-                    </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="third-slide" src="/assets/obra3.jpg"  class="responsive" alt="Third slide">
-                    <div class="container">
-                    <div class="carousel-caption text-right">
-                        <h1>Estradas inter-provínciais</h1>
-                        <p>Degradação das estradas que interligão o país.</p>
-                        <p><a class="btn btn-lg btn-primary" href="<%= dashboard_home_url %>" role="button">Entrar</a></p>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="first-slide" src="/assets/obra1.jpg" class="responsive" width="100%" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="second-slide" src="/assets/obra2.jpg" class="responsive" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="third-slide" src="/assets/obra3.jpg"  class="responsive" alt="Third slide">
+          </div>
         </div>
-
-
-        <!-- Marketing messaging and featurettes ================================================== -->
-        <!-- Wrap the rest of the page in another container to center all the content. -->
-
-        <div class="container marketing">
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <!-- Marketing messaging and featurettes ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+      <!-- about -->
+      <section id="about" class="about">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-xs-12 col-md-10 col-lg-10">
+              <div class="page-title text-center">
+                <span class="section-icon"><i class='flaticon-020-manufacture'></i></span>
+                <div class="p-2"></div>
+                <h5 class="title">Sobre o portal</h5>
+                <div class="p-3"></div>
+                <h3 class="blue-color">A beautiful app for consectetur </h3>
+                <div class="p-2"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiing elit, 
+                  sed do eiusmod tempor incididunt ut labore et laborused sed 
+                  do eiusmod tempor incididunt ut labore et laborused.
+                  Lorem ipsum dolor sit amet, consectetur adipiing elit, 
+                  sed do eiusmod tempor incididunt ut labore et laborused sed 
+                  do eiusmod tempor incididunt ut labore et laborused.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- -->
+      <section id="pub-left" class="pub-left">
+        <div class="container pb-4">
+          <div class="card-box">
+            <div class="row info">
+              <div class="col-lg-6 col-md-7">
+                <img class="img-fuid img-pub-left" src="/assets/obra1.jpg">
+              </div>
+              <div class="col-lg-5 col-md-5 p-lg-3 p-md-2 d-flex align-items-center">
+                <div class="page-title">
+                  <h5 class="title">Titulo da obra </h5>
+                  <h5 class="text-muted float-right d-md-none d-sm-block" style="font-size: 13px;">05.08.2020</h5>
+                  <div class="p-lg-2 p-md-1"></div>
+                  <h3 class="subtitle">Informações adicionais</h3>
+                  <div class="p-lg-2 p-md-1"></div>
+                  <div class="description">
+                    <p class="text-justify">
+                      It is a long established fact that a reader will be 
+                      distracted by the readable content of a page when looking 
+                      at its layout. The point of using Lorem Ipsum is that 
+                      it has a more-or-less normal distribution of letters, as 
+                      opposed to using 'Content here, content here', making it 
+                      look like readable English. Many desktop publishing packages 
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- -->
+      <section id="pub-right" class="pub-right">
+        <div class="container pb-4">
+          <div class="card-box">
+            <div class="row info">
+              <div class="col-lg-6 col-md-7 d-block d-sm-none">
+                <img class="img-fuid img-pub-right float-right" src="/assets/obra2.jpg"/>
+              </div>
+              <div class="col-lg-6 col-md-5 p-lg-3 p-md-2 d-flex align-items-center">
+                <div class="page-title pl-3">
+                  <h5 class="title">Titulo da obra </h5>
+                  <h5 class="text-muted float-right d-md-none d-lg-block" style="font-size: 13px;">05.08.2020</h5>
+                  <div class="p-lg-2 p-md-1"></div>
+                  <h3 class="subtitle">Informações adicionais</h3>
+                  <div class="p-lg-2 p-md-1"></div>
+                  <div class="description">
+                    <p class="text-justify">
+                      It is a long established fact that a reader will be 
+                      distracted by the readable content of a page when looking 
+                      at its layout. The point of using Lorem Ipsum is that 
+                      it has a more-or-less normal distribution of letters, as 
+                      opposed to using 'Content here, content here', making it 
+                      look like readable English. Many desktop publishing packages 
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-7 d-none d-sm-block">
+                <img class="img-fuid img-pub-right float-right" src="/assets/obra2.jpg"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- -->
+      <section id="pub-left" class="pub-left">
+        <div class="container pb-5">
+          <div class="card-box">
+            <div class="row info">
+              <div class="col-lg-6 col-md-7">
+                <img class="img-fuid img-pub-left" src="/assets/obra3.jpg">
+              </div>
+              <div class="col-lg-5 col-md-5 p-lg-3 p-md-2 d-flex align-items-center">
+                <div class="page-title">
+                  <h5 class="title">Titulo da obra </h5>
+                  <h5 class="text-muted float-right d-md-none d-sm-block" style="font-size: 13px;">05.08.2020</h5>
+                  <div class="p-lg-2 p-md-1"></div>
+                  <h3 class="subtitle">Informações adicionais</h3>
+                  <div class="p-lg-2 p-md-1"></div>
+                  <div class="description">
+                    <p class="text-justify">
+                      It is a long established fact that a reader will be 
+                      distracted by the readable content of a page when looking 
+                      at its layout. The point of using Lorem Ipsum is that 
+                      it has a more-or-less normal distribution of letters, as 
+                      opposed to using 'Content here, content here', making it 
+                      look like readable English. Many desktop publishing packages 
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- cards -->
+      <section id="cards" class="cards">
+        <div class="container">
+          <div class="row">
+            <div class="card-deck">
+              <div class="card">
+                <div class="p-4">
+                  <img src="/assets/obra1.jpg" class="card-img-top rounded" alt="...">
+                  <div class="card-body pl-0 pr-0 pt-4">
+                    <h5 class="title pb-4">Titulo da Obra</h5>
+                    <h5 class="data float-right"></h5>
+                    <p class="card-text text-justify">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted float-right">12.07.2020</small>
+                </div>
+              </div>
+              <div class="card">
+                <div class="p-4">
+                  <img src="/assets/obra1.jpg" class="card-img-top rounded" alt="...">
+                  <div class="card-body pl-0 pr-0 pt-4">
+                    <h5 class="title pb-4">Titulo da Obra</h5>
+                    <h5 class="data float-right"></h5>
+                    <p class="card-text text-justify">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted float-right">12.07.2020</small>
+                </div>
+              </div>
+              <div class="card">
+                <div class="p-4">
+                  <img src="/assets/obra3.jpg" class="card-img-top rounded" alt="...">
+                  <div class="card-body pl-0 pr-0 pt-4">
+                    <h5 class="title pb-4">Titulo da Obra</h5>
+                    <h5 class="data float-right"></h5>
+                    <p class="card-text text-justify">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted float-right">12.07.2020</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-4"></div>
+          <div class="row">
+            <div class="card-deck">
+              <div class="card">
+                <div class="p-4">
+                  <img src="/assets/obra1.jpg" class="card-img-top rounded" alt="...">
+                  <div class="card-body pl-0 pr-0 pt-4">
+                    <h5 class="title pb-4">Titulo da Obra</h5>
+                    <h5 class="data float-right"></h5>
+                    <p class="card-text text-justify">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted float-right">12.07.2020</small>
+                </div>
+              </div>
+              <div class="card">
+                <div class="p-4">
+                  <img src="/assets/obra1.jpg" class="card-img-top rounded" alt="...">
+                  <div class="card-body pl-0 pr-0 pt-4">
+                    <h5 class="title pb-4">Titulo da Obra</h5>
+                    <h5 class="data float-right"></h5>
+                    <p class="card-text text-justify">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted float-right">12.07.2020</small>
+                </div>
+              </div>
+              <div class="card">
+                <div class="p-4">
+                  <img src="/assets/obra3.jpg" class="card-img-top rounded" alt="...">
+                  <div class="card-body pl-0 pr-0 pt-4">
+                    <h5 class="title pb-4">Titulo da Obra</h5>
+                    <h5 class="data float-right"></h5>
+                    <p class="card-text text-justify">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted float-right">12.07.2020</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-2"></div>
+          <div class="row d-flex justify-content-center">
+            <div class="col-xs-12 d-block">
+              <div class="pagination">
+                <div class="nav-links">
+                  <a href="#" class="prev page-numbers"><svg class="lnr lnr-chevron-left"><use xlink:href="#lnr-chevron-left"></use></svg></a>
+                  <a href="#" class="page-numbers">1</a>
+                  <span class="page-numbers current">2</span>
+                  <a href="#" class="page-numbers">3</a>
+                  <a href="#" class="page-numbers">4</a>
+                  <a href="#" class="page-numbers">5</a>
+                  <a href="#" class="page-numbers">6</a>
+                  <a href="#" class="next page-numbers"><svg class="lnr lnr-chevron-right"><use xlink:href="#lnr-chevron-right"></use></svg></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <%# <div class="container marketing">
 
         <!-- START THE FEATURETTES -->
 
@@ -165,328 +375,534 @@
             </div>
         </div>
 
-        <hr class="featurette-divider">
-
-        <!-- /END THE FEATURETTES -->
-        <!-- Three columns of text below the carousel -->
-        <div class="row">
-            <div class="col-lg-4">
+        <hr class="featurette-divider"> %>
+      <!-- /END THE FEATURETTES -->
+      <!-- Three columns of text below the carousel -->
+      <!-- <div class="row">
+       <div class="col-lg-4">
                 <img class="rounded-circle" src="/assets/user.png" alt="Generic placeholder image" width="140" height="140">
                 <h2>Personagem 1</h2>
                 <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4">
+            </div> /.col-lg-4 -->
+      <!-- <div class="col-lg-4">
                 <img class="rounded-circle" src="/assets/user.png" alt="Generic placeholder image" width="140" height="140">
                 <h2>Personagem 1</h2>
                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
+            </div> /.col-lg-4 -->
+      <!--<div class="col-lg-4">
             <img class="rounded-circle" src="/assets/user.png" alt="Generic placeholder image" width="140" height="140">
             <h2>Personagem 1</h2>
             <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
-
-      </div><!-- /.container -->
-
-
-         <footer class="kilimanjaro_area">
-        
-        <div class=" kilimanjaro_bottom_header_one section_padding_50 text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <p>© Todos os direitos reservados <i class="fa fa-heart" style="color:red"></i></p>
-                    </div>
-                </div>
+          </div> /.col-lg-4 -->
+      <!-- </div>
+       /.row
+     </div> -->
+      <!-- /.container -->
+      <footer id="footer" class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+              PODOPU © Todos os direitos reservados 
             </div>
+          </div>
         </div>
-    </footer>
+      </footer>
     </main>
-    </body>
+    <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+  </body>
 </html>
 <style>
-/* GLOBAL STYLES
--------------------------------------------------- */
-/* Padding below the footer and lighter body text */
-
-body {
-  padding-top: 3rem;
-  color: #5a5a5a;
-}
-
-
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-/* Carousel base class */
-.carousel {
-  margin-bottom: 4rem;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel-item {
-  height: 32rem;
-  background-color: #777;
-}
-.carousel-item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 52rem;
-}
-
-
-/* MARKETING CONTENT
--------------------------------------------------- */
-
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-.marketing h2 {
-  font-weight: 400;
-}
-.marketing .col-lg-4 p {
-  margin-right: .75rem;
-  margin-left: .75rem;
-}
-
-
-/* Featurettes
-------------------------- */
-
-.featurette-divider {
-  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
-}
-
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -.05rem;
-}
-
-
-/* RESPONSIVE CSS
--------------------------------------------------- */
-
-@media (min-width: 40em) {
-  /* Bump up size of carousel content */
-  .carousel-caption p {
-    margin-bottom: 1.25rem;
-    font-size: 1.25rem;
-    line-height: 1.4;
+  /* GLOBAL STYLES
+  -------------------------------------------------- */
+  /* Padding below the footer and lighter body text */
+  
+  body {
+    padding-top: 3rem;
+    color: #5a5a5a;
   }
-
-  .featurette-heading {
-    font-size: 50px;
+  
+  
+  /* CUSTOMIZE THE CAROUSEL
+  -------------------------------------------------- */
+  
+  /* Carousel base class */
+  .carousel {
+    margin-bottom: 4rem;
   }
-}
-
-@media (min-width: 62em) {
-  .featurette-heading {
-    margin-top: 7rem;
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
   }
-}
-/*********footer*******************/
-. kilimanjaro_area {
-    position: relative;
-    z-index: 1;
-	}
-	.foo_top_header_one {
-    background-color: #15151e;
-    color: #fff;
-}
-.section_padding_100_70 {
-    padding-top: 100px;
-    padding-bottom: 70px;
-}
-.foo_top_header_one {
-    color: #fff;
-}.kilimanjaro_part {
-    margin-bottom: 30px;
-}
-.foo_top_header_one .kilimanjaro_part > h5 {
-    color: #fff;
-}
-.kilimanjaro_part h4, .kilimanjaro_part h5 {
-    margin-bottom: 30px;
-}
-.kilimanjaro_single_contact_info > p, .kilimanjaro_single_contact_info > h5, .kilimanjaro_blog_area > a, .foo_top_header_one .kilimanjaro_part > p {
-    color: rgba(255,255,255,.5);
-}
-p, ul li, ol li {
-    font-weight: 300;
-}
-ul {
-    margin: 0;
-    padding: 0;
-}
-.kilimanjaro_bottom_header_one {
-    background-color: #111;
-}
-.section_padding_50 {
-    padding: 50px 0;
-}
-.kilimanjaro_bottom_header_one p {
-    color: #fff;
-    margin: 0;
-}
-p, ul li, ol li {
-    font-weight: 300;
-}
-.kilimanjaro_bottom_header_one a {
-    color: inherit;
-    font-size: 14px;
-}
-a, h1, h2, h3, h4, h5, h6 {
-    font-weight: 400;
-}
-.m-top-15 {
-    margin-top: 15px;
-}
-ul {
-    margin: 0;
-    padding: 0;
-}
-
-.kilimanjaro_widget > li {
-    display: inline-block;
-}
-p, ul li, ol li {
-    font-weight: 300;
-}
-ol li, ul li {
-    list-style: outside none none;
-}
-.kilimanjaro_widget a {
-    border: 1px solid #333;
-    border-radius: 6px;
-    color: #888;
-    display: inline-block;
-    font-size: 13px;
-    margin-bottom: 4px;
-    padding: 7px 12px;
-}
-ul {
-    margin: 0;
-    padding: 0;
-}
-.kilimanjaro_links a {
-    border-bottom: 1px solid #333;
-    color: rgba(255,255,255,.5);
-    display: block;
-    font-size: 13px;
-    margin-bottom: 5px;
-    padding-bottom: 10px;
-}
-.kilimanjaro_links a {
-    color: rgba(255,255,255,.5);
-    font-size: 13px;
-}
-top-15 {
-    margin-top: 15px;
-}
-.foo_top_header_one .kilimanjaro_part > h5 {
-    color: #fff;
-}
-.kilimanjaro_part h4, .kilimanjaro_part h5 {
-    margin-bottom: 30px;
-}
-.kilimanjaro_social_links > li {
-    display: inline-block;
-}
-p, ul li, ol li {
-    font-weight: 300;
-}
-.kilimanjaro_social_links a {
-    border: 1px solid #333;
-    border-radius: 6px;
-    color: #888;
-    display: inline-block;
-    font-size: 13px;
-    margin-bottom: 3px;
-    padding: 7px 12px;
-}
-.kilimanjaro_blog_area .kilimanjaro_date {
-    color: #27ae60;
-    font-size: 13px;
-    margin-bottom: 5px;
-}
-.kilimanjaro_blog_area > p {
-    color: rgba(255,255,255,.5);
-    line-height: 1.3;
-    margin-bottom: 0;
-}
-.kilimanjaro_works > a {
-    display: inline-block;
-    float: left;
-    position: relative;
-    width: 33.33333333%;
-    z-index: 1;
-}
-.kilimanjaro_thumb {
-    left: 0;
+  
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 32rem;
+    background-color: #777;
+  }
+  .carousel-item > img {
     position: absolute;
     top: 0;
-    width: 75px;
-}
-.kilimanjaro_links a i {
-    padding-right: 10px;
-}
-  /* :: 18.0 Footer Area CSS */
-
-    .footer_area {
-        position: relative;
-        z-index: 1;
-    }
- .footer_bottom p > i,
-    .footer_bottom p > a:hover {
-        color: #27ae60;
-    }	
-
-    .social_links_area {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        padding: 50px 0 30px 0;
-        text-align: center;
-        position: relative;
-        z-index: 1;
-    }
- .social_links_area > a:hover {
-        color: #27ae60;
-    }
-
-    .inline-style .social_links_area > a:hover {
-        background-color: transparent;
-        color: #27ae60;
-        border: 0px solid transparent;
-    }
- .single_feature:hover .feature_text h4 {
-        color: #27ae60;
-    }
-.kilimanjaro_blog_area {
-    border-bottom: 1px solid #333;
-    margin-bottom: 15px;
-    padding: 0 0 15px 90px;
+    left: 0;
+    min-width: 100%;
+    height: 52rem;
+  }
+  
+  @font-face {
+    font-family: 'Open-Sans';
+    src: url('/assets/fonts/opensans-regular-webfont.woff2') format('woff2'),
+         url('/assets/fonts/opensans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+  
+  @font-face {
+  	font-family: "IcoFont";
+  	font-weight: normal;
+  	font-style: "Regular";
+  	src: url("icofont/icofont.woff2") format("woff2"),
+  	url("icofont/icofont.woff") format("woff");
+  }
+  
+  [class^="icofont-"], [class*=" icofont-"] {
+  font-family: 'IcoFont' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  line-height: 1;
+  float: left;
+  /* Better Font Rendering =========== */
+  
+  }
+  
+  .icofont-search-property:before
+  {
+  content: "\ed17";
+  }
+  
+  
+  /**--------------------------------
+   * 	GLOBAL
+  -----------------------------------*/
+  
+  * {
+  	margin: 0;
+  	padding: 0;
+  	font-family: 'Open-Sans', sans-serif;
+  	font-size: 14px;
+  	outline: none;
+  }
+  
+  a {
+  	text-decoration: none;
+  	color: #fff;
+  }
+  
+  a:hover {
+  	color: #f9f9f97d;
+  	text-decoration: none;
+  }
+  
+  section {
+  	padding: 50px 0;
+  }
+  
+  .section-icon {
+  	background-color: rgba(151, 51, 51, 0.312);
+  	display: inline-block;
+  	width: 65px;
+  	height: 65px;
+  	border-radius: 50%;
+  	text-align: center;
+  }
+  
+  .section-icon i {
+  	color: rgba(122, 51, 151, .95);
+  	font-size: 36px;
+  	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+  }
+  
+  .card-box {
+  	border: none;
+  	box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  	position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 0.25rem;
+  }
+  
+  #cards .card {
+  	border: none;
+  	border-radius: 4px;
+  }
+  
+  .title {
+  	position: relative;
+  	display: inline-block;
+  	text-transform: uppercase;
+  	letter-spacing: 1.5px;
+  	color: #29292aa7;
+  	font-weight: 600;
+  	font-size: 14px;
+  }
+  
+  .subtitle {
+  	font-size: 32px;
+  	opacity: .2;
+  }
+  
+  .info {
+  	padding: 30px;
+  }
+  
+  .data {
+  	font-size: 13px;
+  	color: rgba(0, 0, 0, 0.374);
+  }
+  
+  @media (max-width: 320px) {
+  	.title {
+  		font-size: 12px;
+  	}
+  }
+  
+  /* Extra small devices (portrait phones, less than 576px) */
+  @media (max-width: 575.98px) {
+  	section {
+  		padding: 50px 0;
+  	}
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  	.subtitle {
+  		font-size: 28px;
+  	}
+  	.description {
+  		font-size: 14px;
+  	}
+  }
+  
+  /**--------------------------------
+   * 	HEADER SECTION
+  -----------------------------------*/
+  
+  .header {
+  	background: linear-gradient(135deg, rgba(185, 19, 19, 0.857) 0%, rgba(132, 119, 0, 0.802) 50%, rgba(19, 2, 2, 0.755) 80%);
+  	border-radius: 0;
+  	margin: 0em;
+  	padding: .5rem 0rem 0;
+  	padding-bottom: 1rem;
+  	box-shadow: 0 5px 12px rgba(0, 0, 0, 0.362);
+  }
+  
+  .logo {
+  	position: relative;
+    top: 4px;
+    bottom: 0;
+  }
+  
+  .menu {
+  	border-bottom: 1px solid rgba(255, 255, 255, 0.401);
+  	padding: 8px;
+  }
+  
+  #header .title-logo {
+  	font-weight: 600;
+  	font-family: sans-serif;
+  }
+  
+  #header .menu .item {
+  	right: 80px;
+    position: absolute;
+  }
+  
+  #header .menu .login {
+  	position: absolute;
+  	right: 0;
+  }
+  
+  #header .menu .login>a {
+  	color: rgba(255, 255, 255, 0.721);
+  }
+  
+  .menu .item .input {
+  	position: relative;
+  	bottom: 5px;
+  	color: rgba(165, 162, 162, 0.87);
+  }
+  
+  .menu .item .input>input {
+  	background-color: transparent;
+  	border: none;
+  	font-size: 1em;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+  }
+  
+  .menu .item .input>input:focus {
+  	color: rgba(255, 255, 255, 0.523);
+  	outline: none;
+  }
+  
+  .carousel {
+  	margin-top: 17px;
+  }
+  
+  /**--------------------------------
+   * 	ABOUT SECTION
+  -----------------------------------*/
+  
+  #about .title:before {
+    content: '';
+    width: 50px;
+    height: 1px;
+    display: inline-block;
+    background-color: #e1e1e1;
+    margin: 0 15px;
+    -webkit-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  
+  #about .title:after {
+    content: '';
+    width: 50px;
+    height: 1px;
+    display: inline-block;
+    background-color: #e1e1e1;
+    margin: 0 15px;
+    -webkit-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  
+  /**--------------------------------
+   * 	PUB-LEFT SECTION
+  -----------------------------------*/
+  
+  // #first {
+  // 	height: 600px;
+  // 	background: url('/assets/obra1.jpg');
+  // 	background-repeat: no-repeat;
+  // 	background-position: left center;
+  // 	background-size: auto 100%;
+  // 	border-radius: 0 10px 10px 0;
+  // }
+  
+  .pub-left .img-pub-left {
+  	width: 100%;
+  	border-radius: 4px;
+  }
+  
+  
+  #pub-left .title:after {
+    content: '';
+    width: 50px;
+    height: 1px;
+    display: inline-block;
+    background-color: #e1e1e1;
+    margin: 0 15px;
+    -webkit-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  
+  #pub-left .info {
+  	padding: 30px;
+  }
+  
+  /* Extra small devices (portrait phones, less than 576px) */
+  @media (max-width: 575.98px) {
+  	.pub-left .img-pub-left {
+  		width: 100%;
+  		padding: 0 0 30px 0;
+  		border-radius: 0;
+  	}
+  	.page-title {
+  		text-align: center;
+  	}
+  	.title {
+  		padding-bottom: 10px;
+  	}
+  	.subtitle {
+  		padding-bottom: 10px;
+  	}
+  	.description {
+  		padding-bottom: 10px;
+  	}
+  	.pub-left .title:before {
+  		content: '';
+  		width: 50px;
+  		height: 1px;
+  		display: inline-block;
+  		background-color: #e1e1e1;
+  		margin: 0 15px;
+  		-webkit-transform: translateY(-4px);
+  		-ms-transform: translateY(-4px);
+  		transform: translateY(-4px);
+  	}
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  	.pub-left .img-pub-left {
+  		height: 350px;
+  	}
+  }
+  
+  .btn-default {
+  	padding: 12px 40px;
+  	background: linear-gradient(45deg, rgb(139, 17, 17) 40%, rgba(36, 16, 16, 0.829) 100%);
+  	color: #fff;
+  	box-shadow: rgba(0, 0, 0, .1);
+  	transform: translate(0);
+  	display: inline-block;
+  	text-transform: uppercase;
+  	border-radius: 10px;
+  	letter-spacing: 1.5px;
+  	font-weight: 700;
+  	transition: .3s;
+  	font-size: 14px;
+  	border: none;
+  }
+  
+  
+  /**--------------------------------
+   * 	PUB-RIGHT SECTION
+  -----------------------------------*/
+  
+  .pub-right .img-pub-right {
+  	width: 100%;
+  	border-radius: 4px;
+  }
+  
+  .pub-right .title::after {
+  	content: '';
+  	width: 50px;
+  	height: 1px;
+  	display: inline-block;
+  	background-color: #e1e1e1;
+  	margin: 0 15px;
+  	-webkit-transform: translateY(-4px);
+  	-ms-transform: translateY(-4px);
+  	transform: translateY(-4px);
+  }
+  
+  /* Extra small devices (portrait phones, less than 576px) */
+  @media (max-width: 575.98px) {
+  	.pub-right .img-pub-right {
+  		width: 100%;
+  		padding: 0 0 30px 0;
+  		border-radius: 0;
+  	}
+  	.page-title {
+  		text-align: center;
+  	}
+  	.title {
+  		padding-bottom: 10px;
+  	}
+  	.subtitle {
+  		padding-bottom: 10px;
+  	}
+  	.description {
+  		padding-bottom: 10px;
+  	}
+  	.pub-right .title:before {
+  		content: '';
+  		width: 50px;
+  		height: 1px;
+  		display: inline-block;
+  		background-color: #e1e1e1;
+  		margin: 0 15px;
+  		-webkit-transform: translateY(-4px);
+  		-ms-transform: translateY(-4px);
+  		transform: translateY(-4px);
+  	}
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  	.pub-right .img-pub-right {
+  		height: 350px;
+  	}
+  }
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) and (max-width: 1024px) {
+  
+  }
+  
+  .pagination {
+  	text-align: center;
+    margin-top: 50px;
+    width: 100%;
+  }
+  
+  .pagination .nav-links {
+    padding: 20px;
+    display: inline-block;
+  }
+  
+  .pagination .nav-links .page-numbers {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    line-height: 40px;
+  	border-radius: 50%;
+  	color: #000;
+  }
+  
+  .pagination .nav-links .page-numbers.current {
+    background: rgb(72, 44, 191);
+    background: -webkit-linear-gradient(45deg, rgb(191, 44, 44) 0%, rgba(240, 198, 106, 0.918) 100%);
+    background: -o-linear-gradient(45deg, rgb(191, 44, 44) 0%, rgba(106, 198, 240, 1) 100%);
+    background: linear-gradient(45deg, rgb(191, 44, 44) 0%, rgb(240, 231, 106) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#482cbf', endColorstr='#6ac6f0', GradientType=1);
+    color: #ffffff;
+  }
+  
+  .lnr {
+  	display: inline-block;
+  	fill: currentColor;
+  	width: 1em;
+  	height: 1em;
+  	vertical-align: -0.05em;
+  }
+  
+  
+  #footer {
+  	height: 70px;
+  	background-color: #000;
+    color: #fff;
     position: relative;
-    z-index: 1;
-}
-.kilimanjaro_links a {
-    border-bottom: 1px solid #333;
-    color: rgba(255,255,255,.5);
-    display: block;
-    font-size: 13px;
-    margin-bottom: 5px;
-    padding-bottom: 10px;
-}
-
+    bottom: -20px;
+  }
+  
+  .footer>.container>.row>div {
+  		position: relative;
+    	top: 25px;
+  	}
+  
+  /* Extra small devices (portrait phones, less than 576px) */
+  @media (max-width: 575.98px) {
+  	.pagination .nav-links {
+  		padding: 0;
+  	}
+  	.footer>.container>.row>div {
+  		position: relative;
+    	top: 25px;
+  	}
+  }
 </style>
-
