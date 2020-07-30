@@ -57,7 +57,6 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'proxypay'
 
 # This gem is not at the rubygems
-gem 'connector', :git => "git://github.com/nextbss/connector.git"
 
 # Jobs Handler
 gem 'delayed_job_active_record'
