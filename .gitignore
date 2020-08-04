@@ -27,3 +27,9 @@ config/database.yml
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+.generators
+.idea/.gitignore
+.idea/misc.xml
+.idea/modules.xml
+.idea/portal_de_obras_publicas.iml
+.idea/vcs.xml
