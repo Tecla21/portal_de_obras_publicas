@@ -137,7 +137,8 @@ GEM
     proxypay (0.2.5)
       httparty (~> 0.13.7)
     public_suffix (4.0.4)
-    puma (3.12.4)
+    puma (4.3.9)
+      nio4r (~> 2.0)
     rack (2.2.2)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -261,7 +262,7 @@ DEPENDENCIES
   prawn
   prawn-table
   proxypay
-  puma (~> 3.11)
+  puma (~> 4.3)
   rails (~> 5.2.4)
   rails-i18n
   sass-rails (~> 5.0)
